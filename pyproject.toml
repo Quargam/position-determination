@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name = "position-determination"
+dependencies = []
+authors = [{name = "Kapylov Maksim", email = "kapylovmacim@mail.ru"},]
+
+[project.optional-dependencies]
+dev = ["mypy", "flake8"]
+
+[project.urls]
+"Source Code" = "https://github.com/Quargam/position-determination"
+
+[tool.setuptools.dynamic]
+version = {attr = "position_determination.__about__.__version__"}
+
+[project.scripts]
+position-determination = "position_determination.app:app"
